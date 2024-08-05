@@ -1,0 +1,22 @@
+.buttons{
+    width: 90%;
+    overflow: hidden;
+    margin: 0px auto !important;
+    justify-content: space-around;
+}
+.buttons div{
+    text-align: center;
+    background-color: orange;
+    border-radius: 8px;
+    width: 24%;
+    margin-top: 10px;
+}
+.buttons div button {
+    width: 100%;
+    padding: 16px 0px;
+    background-color: transparent;
+    border: 0;
+}
+.buttons div:hover {
+    background-color: rgb(255, 123, 0);
+}

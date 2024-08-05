@@ -1,0 +1,27 @@
+.main-row{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-row input{
+    width: 90%;
+    font-size: 28px;
+    margin: 12px 0px;
+    padding: 0px 10px;
+    font-weight: 600;
+    color: rgb(97, 97, 97);
+    outline: 1px solid rgb(94, 94, 94);
+    border: 0;
+    border-radius: 5px;
+    direction: rtl;
+    transition: 300ms ease-in-out;
+}
+.main-row input::placeholder{
+    color: rgb(145, 145, 145);
+}
+.main-row input:hover{
+    outline: 2px solid rgb(139, 139, 139);
+    transition: 300ms ease-in-out;
+    border: 0;
+}

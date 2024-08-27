@@ -1,0 +1,53 @@
+Node installation
+npm create vite@latest  //vite installation
+npm run dev -- --host   //serve with host
+
+All about components components
+Bootstrap installation
+2 UI projects ===> To do App + Functional Clock  
+
+Fregments
+2 types ==> React.Fragment + easiest is <></>
+
+Map/Loop function 
+i.e {items.map(item=> <h1> This is a {item} </h1> )}
+
+Conditions in react
+{items == 0 ? variable : null}
+{items == 0 && variable}
+using if else before return statement
+
+Installaing and using sweet alerts
+
+Props
+`array destructuring --------
+1 => function List({ name })
+2 => let {name} = props;
+3 => passing via props like props.name 
+`passing props to child
+
+Modular CSS
+only for modules rather than using it on all the project.
+
+Created a calculator using props,modular css, components and map method etc with a interactive and responsive UI/UX...
+
+Child Props passing a lot of props via children props
+
+Event handling
+
+Another hook useRef and it's use cases
+
+Context API
+
+use reducer
+
+use effect
+
+==============     Learned git, github + basic commands to add, clone and edit files etc  =============   
+
+==============     Working with Dummy API's fetching and using data ===============
+
+UseCallBack(to save func), UseMemo(to save data)
+
+Custom hooks
+

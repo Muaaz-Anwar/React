@@ -1,5 +1,6 @@
 import React from 'react'
-function Sidebar({tab, settab}) {
+import { Link } from 'react-router-dom'
+function Sidebar() {
     return (
         <>
             <div
@@ -17,21 +18,21 @@ function Sidebar({tab, settab}) {
                 </a>
                 <hr />
                 <ul className="nav nav-pills flex-column mb-auto">
-                    <li className="nav-item" onClick={()=> {settab("home")}}>
-                        <a href="#" className={`nav-link link-body-emphasis border border-primary ${tab== 'home' && 'active'}`} aria-current="page">
+                    <li className="nav-item">
+                        <Link to="/" className={`nav-link link-body-emphasis border border-primary`} aria-current="page">
                             <svg className="bi pe-none me-2 " width={16} height={16}>
                                 <use xlinkHref="#home" />
                             </svg>
                             Home
-                        </a>
+                        </Link>
                     </li>
-                    <li className='nav-item mt-2' onClick={()=> {settab("create post")}}>
-                        <a href="#" className={`nav-link link-body-emphasis border border-primary ${tab== 'create post' && 'active'}`}>
+                    <li className='nav-item mt-2'>
+                        <Link to="/create-post" className={`nav-link link-body-emphasis border border-primary`}>
                             <svg className="bi pe-none me-2" width={16} height={16}>
                                 <use xlinkHref="#speedometer2" />
                             </svg>
                             Create Post
-                        </a>
+                        </Link>
                     </li>
                 </ul>
                 <hr />

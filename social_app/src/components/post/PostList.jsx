@@ -2,29 +2,13 @@ import React, { useContext, useEffect, useState } from 'react'
 import Post from './Post'
 import { Context_of_post_list } from '../../store/Post_list_store';
 import Welcome from './Welcome';
-import LoadingSpinner from '../LoadingSpinner';
+import { useLoaderData } from 'react-router-dom';
+// import LoadingSpinner from '../LoadingSpinner';
 
 
 function PostList() {
-  const { postlist, createmultiposts } = useContext(Context_of_post_list);
-  const [fetching, setfetching] = useState(true);
-
-    useEffect(() => {
-      const controller = new AbortController();
-      const signal = controller.signal;
-      fetch('https://dummyjson.com/posts', {signal})
-      .then(res => res.json())
-      .then(data => {
-        createmultiposts(data.posts)
-        setfetching(false)
-      });
-      return () => {
-        controller.abort();
-      }
-    }, []);
-    
-  
-
+  const { postlist, fetching } = useContext(Context_of_post_list);
+  // const postlist = useLoaderData();
   return (
     <>
       <div className="container">
@@ -36,8 +20,23 @@ function PostList() {
           )} </div>
       </div>
 
+{/* <div className="container">
+        <div className="row justify-content-around">
+          {postlist == 0 && <Welcome />}
+          
+          {postlist.map((post) => < Post key={post.id} post={post} />
+          )} </div>
+      </div> */}
+
     </>
   )
 }
 
+export const postLoader = () => {
+ return fetch('https://dummyjson.com/posts')
+      .then(res => res.json())
+      .then(data => {
+       return data.posts
+      });
+}
 export default PostList

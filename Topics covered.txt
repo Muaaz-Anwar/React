@@ -51,3 +51,8 @@ UseCallBack(to save func), UseMemo(to save data)
 
 Custom hooks
 
+Submitting data using fetch API(method POST)
+
+REACT ROUTER DOM
+
+React router LoaderData
